@@ -8,6 +8,13 @@ computes NDVI over a user-drawn field boundary, reports zonal statistics,
 classifies vegetation condition into configurable categories, tracks NDVI over
 time, and screens for areas of significant decline.
 
+## Project walkthrough
+
+[![Watch the CropSense dashboard walkthrough](docs/assets/cropsense-preview.png)](docs/assets/cropsense.mp4)
+
+Click the preview to open the 60-second screen recording, which includes a
+completed NDVI analysis result.
+
 > ### What NDVI can and cannot tell you
 >
 > NDVI measures **vegetation vigour** — how much green, photosynthetically
