@@ -10,10 +10,10 @@ time, and screens for areas of significant decline.
 
 ## Project walkthrough
 
-[![Watch the CropSense dashboard walkthrough](docs/assets/cropsense-preview.png)](docs/assets/cropsense.mp4)
+[![Looping CropSense dashboard walkthrough](docs/assets/cropsense-preview.gif)](docs/assets/cropsense.mp4)
 
-Click the preview to open the 60-second screen recording, which includes a
-completed NDVI analysis result.
+The preview loops continuously. Click it to open the full 60-second screen
+recording, which includes a completed NDVI analysis result.
 
 > ### What NDVI can and cannot tell you
 >
