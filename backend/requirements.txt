@@ -1,0 +1,17 @@
+# CropSense backend runtime dependencies
+
+# --- Web framework ---
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.32,<1.0
+
+# --- Configuration / validation ---
+pydantic>=2.9,<3.0
+pydantic-settings>=2.6,<3.0
+python-dotenv>=1.0,<2.0
+
+# --- Google Earth Engine ---
+earthengine-api>=1.4.0
+google-auth>=2.35,<3.0
+
+# --- Authorized regional field-boundary input (GeoPackage) ---
+fiona>=1.9,<2.0; python_version < "3.14"

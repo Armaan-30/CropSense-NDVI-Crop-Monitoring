@@ -1,0 +1,58 @@
+[project]
+name = "cropsense-backend"
+version = "0.1.0"
+description = "Satellite-based crop health monitoring using NDVI (Sentinel-2 via Google Earth Engine)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"
+filterwarnings = [
+    "error::DeprecationWarning:app.*",
+]
+markers = [
+    "integration: hits the live Earth Engine API; requires credentials and CROPSENSE_RUN_INTEGRATION=1",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["."]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "C4",  # flake8-comprehensions
+    "SIM", # flake8-simplify
+    "BLE", # flake8-blind-except
+    "RUF", # ruff-specific
+]
+ignore = [
+    "B008", # FastAPI's Depends(...) in defaults is the documented idiom.
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["app"]
+plugins = ["pydantic.mypy"]
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+no_implicit_optional = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["ee", "ee.*"]
+ignore_missing_imports = true

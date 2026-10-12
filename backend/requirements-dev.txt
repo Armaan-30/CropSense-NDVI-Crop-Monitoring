@@ -1,0 +1,8 @@
+# CropSense backend development dependencies
+-r requirements.txt
+
+pytest>=8.3,<9.0
+pytest-cov>=5.0
+ruff>=0.7
+mypy>=1.13
+httpx2>=2.0,<3.0

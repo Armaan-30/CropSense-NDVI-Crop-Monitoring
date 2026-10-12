@@ -1,0 +1,7 @@
+services:
+  backend:
+    volumes:
+      - type: bind
+        source: ${USERPROFILE}/.config/earthengine
+        target: /home/cropsense/.config/earthengine
+        read_only: true

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.py[cod]
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*service-account*.json
+*-key.json
+credentials.json
+tests/
